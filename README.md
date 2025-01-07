@@ -17,6 +17,7 @@ The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more deta
 - [XTTS-2-UI: A User Interface for XTTS-2 Text-Based Voice Cloning](#xtts-2-ui-a-user-interface-for-xtts-2-text-based-voice-cloning)
   - [Model](#model)
   - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
   - [Setup](#setup)
   - [Inference](#inference)
   - [Target Voices Dataset](#target-voices-dataset)
@@ -24,6 +25,12 @@ The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more deta
   - [Language Support](#language-support)
   - [Notes](#notes)
   - [Credits](#credits)
+
+
+## Requirements
+
+ - Python 3.11 (eg. Python 3.11.8)
+ - Windows, Mac or Linux (Universal)
 
 ## Setup
 
