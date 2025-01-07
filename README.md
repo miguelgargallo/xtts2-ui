@@ -29,7 +29,7 @@ The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more deta
 
 ## Requirements
 
- - Python 3.11 (eg. Python 3.11.8)
+ - Python 3.11 (eg. Python 3.11.9, tested)
  - Windows, Mac or Linux (Universal)
 
 ## Setup
@@ -130,6 +130,43 @@ On initial use, you will need to agree to the terms:
  | > "I have read, understood and agreed to the Terms and Conditions." - [y/n]
  | | >
  ```
+
+Important: during your first generation, if you encounter an error:
+
+```bash
+Running on local URL:  http://127.0.0.1:7860
+
+To create a public link, set `share=True` in `launch()`.
+IMPORTANT: You are using gradio version 4.7.1, however version 4.44.1 is available, please upgrade.
+--------
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/USER/path/venv/lib/python3.11/site-packages/pydantic/type_adapter.py", line 271, in _init_core_attrs
+    self.core_schema = _getattr_no_parents(self._type, '__pydantic_core_schema__')
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/USER/path/venv/lib/python3.11/site-packages/pydantic/type_adapter.py", line 55, in _getattr_no_parents
+    raise AttributeError(attribute)
+AttributeError: __pydantic_core_schema__
+
+During handling of the above exception, another exception occurred:
+...
+```
+
+Install a compatible version of gradio: 
+
+```bash
+pip install -U gradio==4.43.0
+```
+
+and relaunch the app.
+
+```bash
+python app.py
+OR
+streamlit run app2.py 
+```
+
+This solution comes from [Issue 258 on GitHub from jhj0517/Whisper-WebUI](https://github.com/jhj0517/Whisper-WebUI/issues/258#issuecomment-2333390291)
 
 If your model is re-downloading each run, please consult [Issue 4723 on GitHub](https://github.com/oobabooga/text-generation-webui/issues/4723#issuecomment-1826120220).
 
