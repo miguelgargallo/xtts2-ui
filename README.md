@@ -155,8 +155,7 @@ During handling of the above exception, another exception occurred:
 Install a compatible version of gradio: 
 
 ```bash
-pip install -U gradio==4.43.0
-```
+pip install -U gradio==4.44.1
 
 and relaunch the app.
 
